@@ -20,11 +20,12 @@
  */
 
 /**
- * @param	int *digits 	待计算的数组 
- * @param	int digitsSize	数组长度
- * @param	returnSize		返回数组的长度	
- * @return  结果数组
- * @note 	在分配内存的时候注意乘以sizeof(int)
+ * [plusOne description]
+ * @param  digits     [description] 待计算的数组 
+ * @param  digitsSize [description] 数组长度
+ * @param  returnSize [description] 返回数组的长度
+ * @return            [description] 结果数组
+ * @note   在分配内存的时候注意乘以sizeof(int)                         
  */
 int* plusOne(int* digits, int digitsSize, int* returnSize) {
     
