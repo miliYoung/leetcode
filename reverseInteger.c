@@ -37,7 +37,11 @@ int reverse(int x) {
     {
         res = res*10 + temp%10;
         temp = temp/10;
-        printf("@%ld\n",res);
+    }
+
+    if(res > INT_MAX)
+    {
+        return 0;
     }
 
     if( x < 0 )
