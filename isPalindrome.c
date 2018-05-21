@@ -36,46 +36,46 @@ bool isPalindrome(char* s)
 	{
 		while( (s[i] < 'a'|| s[i] > 'z') && (s[i] < 'A'|| s[i] > 'Z' ) && ( s[i] <'0' || s[i] > '9'))
 		{
-            if(i < j)
-            {
-                i++;
-            }
-            else
-            {
-                return true;
-            }
+            		if(i < j)
+            		{
+                		i++;
+           		}
+            		else
+            		{
+                		return true;
+            		}
 		}
 
 		while((s[j] < 'a'|| s[j] > 'z') && (s[j] < 'A'|| s[j] > 'Z' ) && ( s[j] <'0' || s[j] > '9'))
 		{
 			if(j > i)
-            {
-                j--;
-            }
-            else
-            {
-                return true;
-            }
+            		{
+                		j--;
+            		}
+           		else
+            		{
+                		return true;
+            		}
 		}
         
-        if (s[i]>='a' && s[i]<='z')
-        {
-        	s[i] = s[i] - 'a' + 'A';
-        }    
-        if (s[j]>='a' && s[i]<='z')
-        {
-            s[j] = s[j] - 'a' + 'A';
-        }
+        	if (s[i]>='a' && s[i]<='z')
+        	{
+        		s[i] = s[i] - 'a' + 'A';
+        	}	    
+        	if (s[j]>='a' && s[i]<='z')
+        	{
+            		s[j] = s[j] - 'a' + 'A';
+        	}
         
 		if (s[i] == s[j])
 		{
-            i++;
-            j--;
-        }
-        else
-        {
-            return false;
-        }	
+            		i++;
+            		j--;
+        	}
+        	else
+        	{
+            		return false;
+        	}	
 	}
 
 	return true;
