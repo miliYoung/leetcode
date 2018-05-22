@@ -51,10 +51,10 @@ char* convertToTitle(int n)
     {
         return NULL;            
     }
-	else
-	{
-		memset( res, 0,sizeof(count * sizeof(char)));
-	}		
+    else
+    {
+	memset( res, 0,sizeof(count * sizeof(char)));
+    }		
     
     for(i = count -1; i >= 0 ; i--)
     {
