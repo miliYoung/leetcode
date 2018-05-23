@@ -42,7 +42,6 @@ int firstBadVersion(int n) {
         {
             left = middle + 1;
         }
-        middle = (left + right)/2;
     }
 
     return left;
