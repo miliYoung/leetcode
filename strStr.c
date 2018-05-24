@@ -27,6 +27,7 @@
  * @return          [description] 
  * @note 这不是一个好的解法，时间复杂度为O(n^2)
  */
+
 int strStr(char* haystack, char* needle) {
     if(NULL == haystack || NULL == needle) return -1;
     
