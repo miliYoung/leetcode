@@ -33,7 +33,7 @@
  * @param  nums     [description]
  * @param  numsSize [description]
  * @param  k        [description]
- * @return          [description]
+ * @return          [description] not deal
  */
 int findPairs(int* nums, int numsSize, int k) 
 {
