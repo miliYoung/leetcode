@@ -20,6 +20,11 @@
  * Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
  */
 
+/**
+ * [isPalindrome description] 判断一个数字是否是回文数
+ * @param  x [description] 待判断的数字
+ * @return   [description] 返回true表示是，返回false表示不是
+ */
 bool isPalindrome(int x)
 {
 	if( x < 0 )

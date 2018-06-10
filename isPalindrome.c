@@ -58,14 +58,15 @@ bool isPalindrome(char* s)
             		}
 		}
         
-        	if (s[i]>='a' && s[i]<='z')
-        	{
-        		s[i] = s[i] - 'a' + 'A';
-        	}	    
-        	if (s[j]>='a' && s[i]<='z')
-        	{
-            		s[j] = s[j] - 'a' + 'A';
-        	}
+        if (s[i]>='a' && s[i]<='z')
+        {
+        	s[i] = s[i] - 'a' + 'A';
+        }
+
+        if (s[j]>='a' && s[i]<='z')
+        {
+            s[j] = s[j] - 'a' + 'A';
+        }
         
 		if (s[i] == s[j])
 		{
