@@ -29,16 +29,16 @@
  * @return               [description] true表示适合种植，false表示不适合种植
  */
 
-/*#include <stdlib.h>
+#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
 typedef int bool;
 #define false 0;
-#define true 1;*/
+#define true 1;
 
 bool canPlaceFlowers(int* flowerbed, int flowerbedSize, int n) {
-    if(NULL == flowerbed || 0 == flowerbedSize || 0 == n)
+    if(NULL == flowerbed || 0 == flowerbedSize )
     {
         return false;
     }
@@ -49,35 +49,34 @@ bool canPlaceFlowers(int* flowerbed, int flowerbedSize, int n) {
     }
 
     int i = 0, j = 0;
+    bool bflag = false;
     for(i = 0; i < flowerbedSize;)
     {
         j = 1;
         if(*(flowerbed+i) == 1 )
         {
-            for(; j < n+1 && i+j <= flowerbedSize - 1; j++)
+            bflag = false;
+            for(; j <= 2*n+1 && i+j <= flowerbedSize - 1; j++)
             {
                 if(*(flowerbed+i+j) != 0)
                 {
                     return false;
                 }
             }
+            bflag = true;
         }
-        if(*(flowerbed+i+j) == 0)
-        {
-        	*(flowerbed+i+j) = 1;
-        }
-        i = i+j;
+        if(bf)
     }
     
     return true;
 }
 
 
-/*int main()
+int main()
 {
-	int flowerbed[] = {1,0,0,0,1};
-	bool bflag = canPlaceFlowers(flowerbed,sizeof(flowerbed)/sizeof(int),5);
+	int flowerbed[] = {1,0,0,0,1,0,1};
+	bool bflag = canPlaceFlowers(flowerbed,sizeof(flowerbed)/sizeof(int),0);
 
 	printf("bflag = %d\n",bflag);
 	return 0;
-}*/
+}
