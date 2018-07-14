@@ -62,6 +62,4 @@ bool backspaceCompare(char* S, char* T) {
 	}
 
 	return slen == 0 && tlen == 0;
-    
-    
 }
