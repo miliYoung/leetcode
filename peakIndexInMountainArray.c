@@ -22,3 +22,23 @@
  * A is a mountain, as defined above.
  */
 
+int peakIndexInMountainArray(int* A, int ASize) {
+    if(NULL == A || 0 == ASize)
+    {
+        return 0;
+    }
+
+    int i = 0;
+    int max = 0;
+    int index = 0;
+    for(i = 0; i < ASize; ++i)
+    {
+        if(max < A[i])
+        {
+            max = A[i];
+            index = i;
+        }
+    }
+    
+    return index;
+}
