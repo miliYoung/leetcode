@@ -74,7 +74,6 @@ int uniqueMorseRepresentations(char** words, int wordsSize) {
             
         }
     }
-    printf("count = %d, wordsSize = %d\n",count, wordsSize);
     
     free(visited);
     for( i = 0; i < wordsSize; ++i)
