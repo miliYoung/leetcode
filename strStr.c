@@ -29,29 +29,45 @@
  */
 
 int strStr(char* haystack, char* needle) {
-    if(NULL == haystack || NULL == needle) return -1;
     
-    if(strlen(needle) == 0)  return 0;
+    int pos = -1;
+    int i = 0;
+    int j = 0;
+    int lena = strlen(haystack);
+    int lenb = strlen(needle);
     
-    int i = 0, j = 0;
-    for(i = 0; i < strlen(haystack); i++)
+    if(lena < lenb)
     {
-        if(*(haystack+i) == *(needle))
+        return -1; 
+    }
+    
+    if(lenb == 0)
+    {
+        return 0;
+    }
+    
+    for(i = 0; i < lena - lenb + 1; )
+    {
+        j = 0;
+        if(haystack[i] == needle[j])
         {
-            for(j = 0; j < strlen(needle); j++)
-            {
-                if(*(haystack+i+j) != *(needle+j))
-                {
-                    break; 
-                }
-            }
- 
-            if(j == strlen(needle))
-            {
-                return i;
-            }
+           pos = i; 
+           while(j < lenb)
+           {
+               if(haystack[++i] != needle[++j])
+               {
+                   break;
+               }             
+           }
+            
+           if(j == lenb)
+           {
+               return pos;
+           }         
         }
+        i = i-j+1;
     }
     
     return -1;
+    
 }
