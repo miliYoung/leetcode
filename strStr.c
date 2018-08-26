@@ -25,7 +25,7 @@
  * @param  haystack [description]
  * @param  needle   [description]
  * @return          [description] 
- * @note 这不是一个好的解法，时间复杂度为O(n^2)
+ * @note 
  */
 
 int strStr(char* haystack, char* needle) {
